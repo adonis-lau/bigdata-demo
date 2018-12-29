@@ -15,7 +15,7 @@ import java.io.IOException;
  * @date: 2018/12/29 18:48
  */
 public class WordCount {
-    public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+    public static void main(String[] args) throws IOException {
         // 创建job对象
         Job job = Job.getInstance(new Configuration());
         // 指定程序的入口
@@ -27,7 +27,7 @@ public class WordCount {
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(LongWritable.class);
         // 数据HDFS文件服务器读取数据路径
-        //FileInputFormat.setInputPaths(job, new Path("input/words.txt"));
+        /*FileInputFormat.setInputPaths(job, new Path("input/words.txt"));*/
         FileInputFormat.addInputPath(job, new Path(args[0]));
         // 指定自定义的Reducer阶段的任务处理类
         job.setReducerClass(WordCountReducer.class);
@@ -35,10 +35,10 @@ public class WordCount {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(LongWritable.class);
         // 将计算的结果上传到HDFS服务
-        //FileOutputFormat.setOutputPath(job, new Path("input/wordsResult"));
+        /*FileOutputFormat.setOutputPath(job, new Path("input/wordsResult"));*/
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         // 执行提交job方法，直到完成，参数true打印进度和详情
-        //job.waitForCompletion(true);
+        /*job.waitForCompletion(true);*/
         System.out.println("Finished");
         System.out.println("测试完成");
     }
