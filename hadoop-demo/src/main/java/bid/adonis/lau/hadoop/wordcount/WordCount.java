@@ -16,8 +16,13 @@ import java.io.IOException;
  */
 public class WordCount {
     public static void main(String[] args) throws IOException {
+        Configuration conf = new Configuration();
+        conf.set("fs.defaultFS", "hdfs://mac.adonis-lau.bid:9000");
+        conf.set("fs.hdfs.impl","org.apache.hadoop.hdfs.DistributedFileSystem");
+        conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
+
         // 创建job对象
-        Job job = Job.getInstance(new Configuration());
+        Job job = Job.getInstance();
         // 指定程序的入口
         job.setJarByClass(WordCount.class);
         //作业名称

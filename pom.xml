@@ -7,6 +7,7 @@
     <groupId>bid.adonis.lau</groupId>
     <artifactId>bigdata-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>bigdata-demo</name>
     <description>Demo project for BigData</description>
@@ -133,7 +134,7 @@
                         </descriptorRefs>
                         <archive>
                             <manifest>
-                                <mainClass>bid.adonis.lau.run.MainClass</mainClass>
+                                <mainClass>bid.adonis.lau.hadoop.wordcount.WordCount</mainClass>
                                 <addClasspath>true</addClasspath>
                                 <classpathPrefix>lib/</classpathPrefix>
                             </manifest>
@@ -148,23 +149,23 @@
                                 <goal>single</goal>
                             </goals>
                             <configuration>
-                                <descriptors>
+                                <!--<descriptors>
                                     <descriptor>src/main/assembly/assembly.xml</descriptor>
-                                </descriptors>
+                                </descriptors>-->
                                 <outputDirectory>${basedir}/deploy</outputDirectory>
                             </configuration>
                         </execution>
                     </executions>
                 </plugin>
                 <!-- 跳过Test类 -->
-                <plugin>
+                <!--<plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
                         <skip>${maven.test.skip}</skip>
                         <testFailureIgnore>${maven.test.failure.ignore}</testFailureIgnore>
                     </configuration>
-                </plugin>
+                </plugin>-->
                 <!-- JDK and Encoding -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
