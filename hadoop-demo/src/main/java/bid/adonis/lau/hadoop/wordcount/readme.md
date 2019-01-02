@@ -11,11 +11,8 @@ hello tom
 ####2、上传到hdfs文件服务器/hadoop目录下：
 执行命令：
 ```text
-hadoop fs -put /home/words.txt /hadoop/words.txt
-hadoop fs -cat /hadoop/words.txt
-hadoop fs -ls
-hadoop fs -put /home/dcadmin/my/words.txt input/words.txt
-hadoop fs -cat input/words.txt
+hadoop fs -put /home/words.txt /learn/test-files/word-count/words.txt
+hadoop fs -cat /learn/test-files/word-count/words.txt
 ```
 
 ####3、将程序打成Jar包
