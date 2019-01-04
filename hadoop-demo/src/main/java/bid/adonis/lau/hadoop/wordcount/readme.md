@@ -1,3 +1,4 @@
+##WordCount
 ####1、在/home路径下，新建words.txt文档，文档内容如下：
 
 ```text
@@ -29,6 +30,5 @@ hadoop jar hadoop-demo.jar bid.adonis.lau.hadoop.wordcount.WordCount
 ```text
 hadoop fs -ls /hadoop/wordsResult
 hadoop fs -cat /hadoop/wordsResult/part-r-00000
-hadoop fs -ls input/wordsResult
-hadoop fs -cat  input/wordsResult/part-r-00000
+
 ```
