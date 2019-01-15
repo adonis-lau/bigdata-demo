@@ -12,8 +12,8 @@ hello tom
 ####2、上传到hdfs文件服务器/hadoop目录下：
 执行命令：
 ```text
-hadoop fs -put /home/words.txt /learn/test-files/word-count/words.txt
-hadoop fs -cat /learn/test-files/word-count/words.txt
+hadoop fs -put /home/words.txt learn/test-files/word-count/words.txt
+hadoop fs -cat learn/test-files/word-count/words.txt
 ```
 
 ####3、将程序打成Jar包
@@ -28,7 +28,7 @@ hadoop jar hadoop-demo.jar bid.adonis.lau.hadoop.wordcount.WordCount
 ####5、查看执行结果
 执行命令：
 ```text
-hadoop fs -ls /hadoop/wordsResult
-hadoop fs -cat /hadoop/wordsResult/part-r-00000
+hadoop fs -ls learn/test-files/word-count/result/1546101492383
+hadoop fs -cat learn/test-files/word-count/result/1546101492383/part-r-00000
 
 ```

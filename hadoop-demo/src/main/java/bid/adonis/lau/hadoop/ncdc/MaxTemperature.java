@@ -27,8 +27,8 @@ public class MaxTemperature {
         job.setJarByClass(MaxTemperature.class);
         job.setJobName("Max temperature");
 
-        FileInputFormat.addInputPath(job, new Path("/learn/hadoop-book/input/ncdc/all"));
-        Path outputPath = new Path("/learn/hadoop-book/input/ncdc/all/output");
+        FileInputFormat.addInputPath(job, new Path("learn/hadoop-book/input/ncdc/all"));
+        Path outputPath = new Path("learn/hadoop-book/input/ncdc/all/output");
         if (fs.exists(outputPath)) {
             // 如果目录存在，则删除
             fs.delete(outputPath, true);
