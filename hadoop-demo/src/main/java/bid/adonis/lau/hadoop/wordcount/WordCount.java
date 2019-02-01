@@ -18,7 +18,8 @@ import java.io.IOException;
 public class WordCount {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://mac.adonis-lau.bid:8020");
+//        conf.set("fs.defaultFS", "hdfs://mac.adonis-lau.bid:8020");
+        conf.set("fs.defaultFS", "hdfs://bigdata.shadowsocks.tech:8020");
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
         conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
 
